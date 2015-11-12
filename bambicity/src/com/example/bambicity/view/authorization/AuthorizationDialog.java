@@ -37,7 +37,6 @@ public class AuthorizationDialog {
 			public void onClick(DialogInterface dialog, int which) 
 			{
 				choiseUserAccount = csUserAccounts[which].toString();
-				
 			}
 		}).setCancelable(false)	
         .setPositiveButton("Вход",

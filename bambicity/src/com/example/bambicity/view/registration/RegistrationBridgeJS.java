@@ -50,11 +50,4 @@ public class RegistrationBridgeJS {
 		});
     	registrationManager.send();
     }
-    
-    @JavascriptInterface
-    public void cancel()
-    {
-    	android.os.Process.killProcess(android.os.Process.myPid());
-        System.exit(0);
-    }
 }

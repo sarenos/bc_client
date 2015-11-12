@@ -137,15 +137,21 @@ public class MapFragment extends Fragment {
 		UserInfoModel.getInstance().setSelectedUser(null);
 	}
 	
-	private void showMyLocation()
+	public void showMyLocation()
 	{
-		  CameraPosition cameraPosition = new CameraPosition.Builder()
-	        .target(new LatLng(Double.parseDouble(UserInfoModel.getInstance().getLat()), Double.parseDouble(UserInfoModel.getInstance().getLot())))
-	        .zoom(18)
-	        .bearing(45)
-	        .build();
-	    CameraUpdate cameraUpdate = CameraUpdateFactory.newCameraPosition(cameraPosition);
-	    map.animateCamera(cameraUpdate);
+		getActivity().runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
+				  CameraPosition cameraPosition = new CameraPosition.Builder()
+			        .target(new LatLng(Double.parseDouble(UserInfoModel.getInstance().getLat()), Double.parseDouble(UserInfoModel.getInstance().getLot())))
+			        .zoom(18)
+			        .bearing(45)
+			        .build();
+			    CameraUpdate cameraUpdate = CameraUpdateFactory.newCameraPosition(cameraPosition);
+			    map.animateCamera(cameraUpdate);
+			    UserInfoModel.getInstance().setShowMyLocation(true);
+			}
+		});
 	}
 
 	@SuppressLint("NewApi")

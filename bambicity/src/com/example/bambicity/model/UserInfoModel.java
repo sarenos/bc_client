@@ -30,6 +30,8 @@ public class UserInfoModel {
 	private UserResponseModel selectedUser;
 	private LastSendLocationData lastSendLocationData;
 	private ProgressDialog progressDialog;
+	private boolean isShowMyLocation;
+
 
 	public boolean isSendStatus() {
 		return sendStatus;
@@ -198,5 +200,13 @@ public class UserInfoModel {
 
 	public void setNew_messages(String new_messages) {
 		this.new_messages = new_messages;
+	}
+
+	public boolean isShowMyLocation() {
+		return isShowMyLocation;
+	}
+
+	public void setShowMyLocation(boolean isShowMyLocation) {
+		this.isShowMyLocation = isShowMyLocation;
 	}
 }

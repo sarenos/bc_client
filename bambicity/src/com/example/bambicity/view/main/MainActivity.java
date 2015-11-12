@@ -189,7 +189,9 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
 			restoreActionBar();
 			return true;
 		}
-		return super.onCreateOptionsMenu(menu);
+		super.onCreateOptionsMenu(menu);
+		menu.close();
+		return false;
 	}
 
 	@Override

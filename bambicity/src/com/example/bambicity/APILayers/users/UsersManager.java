@@ -47,6 +47,9 @@ public class UsersManager extends Manager {
 				}
 			});
 			usersManagerConfig.getMapFragment().showUsers();
+			if(!UserInfoModel.getInstance().isShowMyLocation()){
+				usersManagerConfig.getMapFragment().showMyLocation();
+			}
 		}
 		
 		@Override

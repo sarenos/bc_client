@@ -1,9 +1,6 @@
 $(document).ready(function(){
 
-	    $('#account').text(WRAPI.getUserAccount());  
-		$('#btn-cancel').click( function(){
-		   	   WRAPI.cancel();
-	}); 
+	    $('#account').text(WRAPI.getUserAccount());   
 	
 $('form').submit(function() {
 	$('#btn-save').hide();
