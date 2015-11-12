@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title></title>
+    		<link href="../libs/bootstrap3/css/bootstrap-theme.min.css" rel="stylesheet">
+    
+    <link href="../libs/bootstrap3/css/messages.css" rel="stylesheet" media="screen">
+	<link href="../libs/bootstrap3/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../libs/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+</head>
+<body>
+<div class="header">Conversation</div>
+<div class="container">
+    <div class="wrap ">
+
+        <div class="Area L">
+            <div class="L">
+                <a href="https://twitter.com/SamiMassadeh">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrEyVlaWx0_FK_sz86j-CnUC_pfEqw_Xq_xZUm5CMIyEI_-X2hRUpx1BHL"/>
+                </a>
+            </div>
+            <div class="text R textR">
+                <div class="message">Hi Mariam, How Are You?</div>
+                <div class="time">10:51</div>
+            </div>
+        </div>
+
+        <div class="Area R">
+            <div class="R">
+                <a href="https://twitter.com/MariamMassadeh">
+                    <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSxU35znsBhAWQd5BouLIVtH1P4WNa0JZ_XXpyViHOIARbM2igbNgC6_kp5"/>
+                </a>
+            </div>
+            <div class="text L textL"><div class="message">Hi Sami, Fine, Thank You, How Are You?</div>
+                <div class="time">10:51</div>
+            </div>
+            <div class="status">Delivered</div>
+        </div>
+
+        <div class="Area L">
+            <div class="L">
+                <a href="https://twitter.com/SamiMassadeh">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrEyVlaWx0_FK_sz86j-CnUC_pfEqw_Xq_xZUm5CMIyEI_-X2hRUpx1BHL"/>
+                </a>
+            </div>
+            <div class="text R textR"><div class="message">Fine, Can I see you tomorrow?</div>
+                <div class="time">10:51</div>
+            </div>
+        </div>
+
+        <div class="Area R">
+            <div class="R">
+                <a href="https://twitter.com/MariamMassadeh">
+                    <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSxU35znsBhAWQd5BouLIVtH1P4WNa0JZ_XXpyViHOIARbM2igbNgC6_kp5"/>
+                </a>
+            </div>
+            <div class="text L textL">
+                <div class="message">sure, Yes I can,
+                    t.c</div>
+                <div class="time">10:51</div>
+            </div>
+            <div class="status">Delivered</div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="progressbar">
+            <div></div>
+        </div>
+        <div class="Area">
+            <textarea placeholder="Participate in coversation" class="coversation"></textarea><br/>
+            <input type="button" id="send" value="SEND"/>
+        </div>
+    </div>
+
+</div>
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="dist/js/bootstrap.js"></script>
+<script src="js/jquery.autosize.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('#send').on('click', function() {
+            console.log($('.coversation').val());
+            if ($('.coversation').val().replace(/\s+/g, '').length) {
+                var start = '<div class="Area R"><div class="R"><a href="https://twitter.com/MariamMassadeh">'
+                        +'<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSxU35znsBhAWQd5BouLIVtH1P4WNa0JZ_XXpyViHOIARbM2igbNgC6_kp5"/>'
+                        +'</a>'
+                        +'</div><div class="text L textL"><div class="message">';
+                var end = '</div><div class="time">10:51</div></div><div class="status">Delivered</div></div>';
+                $('.wrap').append(start + $('.coversation').val() + end);
+                $('.coversation').val('');
+                $('.coversation').height('40px');
+                scroll_to_bottom();
+            }
+        });
+
+        function scroll_to_bottom() {
+            $("html,body").animate({"scrollTop":$(".container").height()},1000);
+        }
+
+        $('textarea').autosize({
+            className: 'autosizejs',
+            id: 'autosizejs',
+            append: '\n',
+            callback: scroll_to_bottom,
+            resizeDelay: 10,
+            placeholder: true
+        });
+        scroll_to_bottom();
+    });
+
+</script>
+
+</body>
+</html>

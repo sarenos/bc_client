@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+<ImageView
+        android:id="@+id/listicon"
+        android:layout_width="200px"
+        android:layout_height="200px"
+        android:layout_marginLeft="4px"
+        android:layout_marginRight="10px"
+        android:layout_marginTop="4px"
+        android:src="@drawable/no_photo" >
+</ImageView>
+
+<TextView
+ android:id="@+id/list_online_status"
+ android:layout_width="wrap_content"
+ android:layout_height="wrap_content"
+ android:textSize="24sp">
+ 
+</TextView>
+
+<LinearLayout 
+	android:orientation="vertical" 
+	android:layout_width="match_parent" 
+	android:layout_height="wrap_content"
+ 	android:gravity="center"
+>
+
+<TextView
+ android:id="@+id/listlabel"
+ android:layout_width="wrap_content"
+ android:layout_height="wrap_content"
+ android:gravity="center_horizontal"
+ android:text="TextView"
+ android:textSize="24sp">
+</TextView>
+
+<TextView
+ android:id="@+id/list_age"
+ android:layout_width="wrap_content"
+ android:layout_height="wrap_content"
+ android:gravity="center_vertical"
+ android:padding="5dp"
+ android:text="age"
+ android:textSize="20sp">
+</TextView>
+
+
+</LinearLayout>
+
+
+
+</LinearLayout>

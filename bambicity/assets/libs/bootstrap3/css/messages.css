@@ -1,0 +1,103 @@
+.wrap {
+    min-height: 80%;
+    display: block;
+}
+
+.reply {
+    box-sizing: border-box;
+    float: left;
+    width: auto;
+    max-width: 80%;
+    position: relative;
+    clear: both;
+
+    background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.15, #DFE9EF),color-stop(1, #8A98B6));
+
+    border: solid 1px rgba(0,0,0,0.5);
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+
+    -webkit-box-shadow: inset 0 8px 5px rgba(255,255,255,0.65), 0 1px 2px rgba(0,0,0,0.2);
+    box-shadow: inset 0 8px 5px rgba(255,255,255,0.65), 0 1px 2px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+    padding: 6px 20px;
+    color: #000;
+    text-shadow: 0 1px 1px rgba(255,255,255,0.8);
+    word-wrap: break-word;
+    font: 13px "Lucida Grande",Tahoma,Geneva,Verdana,Arial,sans-serif;
+}
+.reply:before, .reply:after {
+    border-radius: 20px / 5px;
+    content: '';
+    display: block;
+    position: absolute;
+}
+.reply:before {
+    border: 10px solid transparent;
+    border-bottom-color: rgba(0,0,0,0.5);
+    bottom: 0px;
+    left: -7px;
+    z-index: -2;
+}
+.reply:after {
+    border: 8px solid transparent;
+    border-bottom-color: #95c2fd;
+    bottom: 1px;
+    left: -5px;
+}
+.from-me {
+    float: right;
+
+    background: #95c2fd;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.15, #bee2ff), color-stop(1, #95c2fd));
+    background-image: linear-gradient(bottom, #bee2ff 15%, #95c2fd 100%);
+}
+.from-me:before {
+    left: auto;
+    right: -7px;
+}
+.from-me:after {
+    left: auto;
+    right: -5px;
+    border-bottom-color: #95c2fd;
+}
+
+.message {
+
+    width:100%;
+   
+
+}
+.footer {
+    left: 0; bottom: 0;
+    color: #fff;
+    width: 100%;
+    background: aliceblue;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
+html, body {
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+}
+textarea { resize:vertical; max-height:300px; min-height:20px; }
+.iwrap {
+    margin: 0 6px 0 0;
+}
+.send_button {
+    font-weight: 700;
+    color: #fff;
+    background-color: #6182aa;
+    border-radius: 4px;
+    width:55px;
+    float:right;
+}
+.dialog_name {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
